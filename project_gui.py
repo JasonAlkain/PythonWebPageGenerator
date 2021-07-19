@@ -29,11 +29,12 @@ def load_gui(self):
     self.lbl_p["fg"] = 'whitesmoke'
     self.lbl_p["bg"] = '#303030'
     # Notification
-    self.lbl_display = Label(self.master)
+    self.lbl_display = Label(self.master, text='Notification Area')
     self.lbl_display["font"] = ('Arial', 16)
-    self.lbl_display["bg"] = '#303030'
+    self.lbl_display["bg"] = '#666'
     self.lbl_display["fg"] = 'whitesmoke'
     self.lbl_display["height"] = 4
+    self.lbl_display["width"] = 20
 
     #################################
     # Entry Setup
@@ -51,13 +52,6 @@ def load_gui(self):
     #################################
     # Button Setup
     #################################
-    # Test Button Setup
-    self.btn_Test = Button(self.master)
-    self.btn_Test["text"] = 'Test'
-    self.btn_Test["width"] = 10
-    self.btn_Test["height"] = 2
-    self.btn_Test["command"] = lambda: print(project_func.testHtml(self))
-    self.btn_Test["bg"] = '#222'
     # Submit Button Setup
     self.btn_submit = Button(self.master)
     self.btn_submit["text"] = 'Submit'
@@ -95,10 +89,8 @@ def load_gui(self):
     #################################
     # Button
     #################################
-    self.btn_Test.grid(
-        row=5, column=0, padx=(20, 0), pady=(20, 0), sticky=NE)
     self.btn_Open.grid(
-        row=5, column=1, padx=(20, 0), pady=(20, 0), sticky=NE)
+        row=5, column=0, padx=(20, 0), pady=(20, 0), sticky=NW)
     self.btn_submit.grid(
         row=5, column=2, padx=(20, 0), pady=(20, 0), sticky=NE)
     self.btn_close.grid(

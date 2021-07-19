@@ -29,7 +29,7 @@ def submit(self):
     self.lbl_display.config(text='Changes made!\n{}\n{}'.format(_h1s, _ps))
     htmlDoc = htmlSetup(self)
     writeData('index.html', '{}'.format(htmlDoc), 'w')
-    #self.lbl_display.config(text='')
+    # self.lbl_display.config(text='')
 
 
 #
@@ -67,11 +67,6 @@ def openFile(fileName=''):
     return data
 
 
-def testHtml(self):
-    _hs = htmlSetup(self)
-    print(_hs)
-
-
 def body_html(self):
     _h1s = '\n\t\t<h1>{}</h1>'.format(self.header_html.get())
     _ps = '\n\t\t<p>{}</p>'.format(self.paragraph_html.get())
@@ -87,7 +82,8 @@ def htmlSetup(self):
     titleTag = '<title>PWPG</title>'
     headTag = '<head>\n\t{}\n\t{}\n\t{}\n\t{}\n</head>'.format(
         metaTags[0], metaTags[1], metaTags[2], titleTag)
-    bodyTag = '<body>\n\t{}\n</body>'.format(body_html(self))
+    bodyTag = '<body style="text-align: center; padding: 0 20;">\n\t{}\n</body>'.format(
+        body_html(self))
     htmlTag = '<html lang="en">\n{}\n{}\n</html>'.format(headTag, bodyTag)
     return '{}\n{}'.format(docType, htmlTag)
 

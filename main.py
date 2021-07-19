@@ -18,7 +18,7 @@ class Application(Frame):
         self.master = master
         self.master.title('Learning TKinter!')
         self.master.resizable(width=False, height=False)
-        self.master.geometry('{}x{}'.format(530, 320))
+        self.master.geometry('{}x{}'.format(460, 300))
         self.master.config(bg='#303030')
         self.messagebox = messagebox
         self.master.protocol("WM_DELETE_WINDOW",
